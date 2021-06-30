@@ -5,16 +5,20 @@
     <title>Xcent</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/slick-theme.css" />
     <link rel="stylesheet" href="./font/Font Awesome 5 Brands-Regular-400.otf">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
 </head>
 
 <body>
-
     <section class="home">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -23,7 +27,6 @@
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
-
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
@@ -35,12 +38,11 @@
                     <img src="./image/home1.jpg" alt="Los Angeles">
                 </div>
                 <div class="item">
-                    <img src="image/home2.jpg" alt="Chicago" style="width:100%;">
+                    <img src="./image/home2.jpg" alt="Chicago" style="width:100%;">
                 </div>
                 <div class="item">
                     <img src="./image/home3.jpg" alt="New York" style="width:100%;">
                 </div>
-
             </div>
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -59,17 +61,16 @@
                 <div class="container">
                     <div class="navbar-header">
                         <a href="" class="navbar-brand">XCENT</a>
-
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">Works</a></li>
-                            <li><a href="#">service</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">testimonial</a></li>
-                            <li><a href="#">blog</a></li>
-                            <li><a href="#">contact</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -103,7 +104,6 @@
                 <figure data-content="Some work one" class="image">
                     <img src="./image/p1-1.jpg" alt="">
                 </figure>
-
             </div>
             <div class="col-md-4">
                 <figure data-content="Some work one" class="image">
@@ -119,7 +119,6 @@
                 <figure data-content="Some work one" class="image">
                     <img src="./image/p4-4.jpg" alt="">
                 </figure>
-
             </div>
             <div class="col-md-4">
                 <figure data-content="Some work one" class="image">
@@ -153,7 +152,6 @@
                             <div class="text-content">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -167,7 +165,6 @@
                             <div class="text-content">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -181,7 +178,6 @@
                             <div class="text-content">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -195,7 +191,6 @@
                             <div class="text-content">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -209,7 +204,6 @@
                             <div class="text-content">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -223,7 +217,6 @@
                             <div class="text-content">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -233,24 +226,179 @@
     <section class="about">
         <div class="row">
             <div class="col-md-6 about-img">
-                <img src="./image/about.jpg" alt="" style="height: 900px;width: 760px;">
             </div>
             <div class="col-md-6 about-text">
                 <div class="row" style=" margin-top: 100px;">
-                    <div class="all-header">
-                        <h2 class="all-title">
-                            About Me
-                            <span>About</span>
-                        </h2>
-                        <div class="line"></div>
-                        <div class="subtitle">
-                            He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+                    <div class="col-sm-12">
+                        <div class="all-header">
+                            <h2 class="all-title">
+                                About Me
+                                <span>About</span>
+                            </h2>
+                            <div class="line"></div>
+                            <div class="subtitle">
+                                He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="hobby">
+                            <div class="ab-icon">
+                                <i class="fas fa-camera-retro"></i>
+                            </div>
+                            <div class="ab-text">
+                                <h3 class="ab-title">Photographer</h3>
+                                <div class="ab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="hobby">
+                            <div class="ab-icon">
+                                <i class="fas fa-headphones-alt"></i>
+                            </div>
+                            <div class="ab-text">
+                                <h3 class="ab-title">Music</h3>
+                                <div class="ab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="hobby">
+                            <div class="ab-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="ab-text">
+                                <h3 class="ab-title">Painting</h3>
+                                <div class="ab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="hobby">
+                            <div class="ab-icon">
+                                <i class="fas fa-hat-wizard"></i>
+                            </div>
+                            <div class="ab-text">
+                                <h3 class="ab-title">Magic</h3>
+                                <div class="ab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="testimony">
+        <div class="container">
+            <div class="all-header testi">
+                <h2 class="all-title">
+                    Testimony
+                    <span>Testimony</span>
+                </h2>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col align-self-center">
+                    <div class="T-icon">
+                        <i class="fas fa-quote-left" style="margin-left: 23px;"></i>
+                    </div>
+                    <div class="slide-text">
+                        <div class="single-item">
+                            <div>
+                                <div class="item-text">
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+                                    <span>Jon Doe, Web Developer</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="item-text">
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+                                    <span>Jon Doe, Web Developer</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="item-text">
+                                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+                                    <span>Jon Doe, Web Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="blog">
+        <div class="container">
+            <div class="all-header testi">
+                <h2 class="all-title">
+                    Blog
+                    <span>Articles</span>
+                </h2>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="blog-img">
+                        <img src="./image/blog1.jpg" alt="">
+                        <span>Passion</span>
+                    </div>
+                    <div class="blog-text">
+                        <h3 class="blog-title">
+                            BEAUTY OF NATURE
+                        </h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...</div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="blog-img">
+                        <img src="./image/blog3.jpg" alt="">
+                        <span>Design</span>
+                    </div>
+                    <div class="blog-text">
+                        <h3 class="blog-title">
+                            10 tips for drawing with coloured pencils
+                        </h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...</div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="blog-img">
+                        <img src="./image/blog2.jpg" alt="">
+                        <span>Design</span>
+                    </div>
+                    <div class="blog-text">
+                        <h3 class="blog-title">
+                            A Week With the Apple Watch
+                        </h3>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...</div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <a class="blog-viewMore" href="#">VIEW MORE</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.single-item').slick({
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
 
 </body>
 

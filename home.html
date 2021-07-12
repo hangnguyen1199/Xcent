@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 
 </head>
 
 <body>
     <a id="back"><i class="fas fa-arrow-up" style="font-size: 14px;"></i></a>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-title">
             <div class="hello">Hello, my name is Alice Joseph and</div>
             <h1 style="color: #fff;">I AM FRONT-END DEVELOPER</h1>
@@ -54,7 +55,7 @@
 
         </div>
     </section>
-    <div class="menu">
+    <div class="menu" id="menu1" data-spy="affix" data-offset-top="600">
         <header class="header">
             <nav class="navbar navbar-custom">
                 <div class="container">
@@ -105,7 +106,7 @@
             </div>
         </div>
         <div class="row-center list">
-            <div class="col-md-4 list-item">
+            <div class="col-12 col-sm-6 col-md-4 list-item">
                 <figure class="image">
                     <img src="./image/p1-1.jpg" alt="">
                     <div class="caption-inner">
@@ -114,7 +115,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="col-md-4 list-item">
+            <div class="col-12 col-sm-6 col-md-4 list-item">
                 <figure class="image">
                     <img src="./image/p2-2.jpg" alt="">
                     <div class="caption-inner">
@@ -123,7 +124,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="col-md-4 list-item">
+            <div class="col-12 col-sm-6 col-md-4 list-item">
                 <figure class="image">
                     <img src="./image/p3-3.jpg" alt="">
                     <div class="caption-inner">
@@ -132,7 +133,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="col-md-4 list-item">
+            <div class="col-12 col-sm-6 col-md-4 list-item">
                 <figure class="image">
                     <img src="./image/p4-4.jpg" alt="">
                     <div class="caption-inner">
@@ -141,7 +142,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="col-md-4 list-item">
+            <div class="col-12 col-sm-6 col-md-4 list-item">
                 <figure class="image">
                     <img src="./image/p5-5.jpg" alt="">
                     <div class="caption-inner">
@@ -150,7 +151,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="col-md-4 list-item">
+            <div class="col-12 col-sm-6 col-md-4 list-item">
                 <figure class="image">
                     <div class="caption-inner">
                         <h3 class="alltext">Some work one</h3>
@@ -256,9 +257,9 @@
     </section>
     <section id="about-me" class="about">
         <div class="row">
-            <div class="col-xs-12 col-md-6 about-img">
+            <div class="col-xs-12 col-sm-6 about-img">
             </div>
-            <div class="col-xs-12 col-md-6 col-md-offset-6 about-text">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-6 about-text">
                 <div class="row" style=" margin-top: 100px;">
                     <div class="col-sm-12">
                         <div class="all-header wow fadeInUp">
@@ -541,6 +542,13 @@
             $('html, body').animate({
                 scrollTop: 0
             }, '10000');
+        });
+    </script>
+    <script>
+        $('#menu1').affix({
+            offset: {
+                top: $('#home').height()
+            }
         });
     </script>
 </body>

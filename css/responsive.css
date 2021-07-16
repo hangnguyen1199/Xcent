@@ -9,6 +9,25 @@
 }
 
 @media(max-width:768px) {
+    .image:hover:after {
+        opacity: 1;
+        width: 92%;
+        height: 78%;
+        margin-top: 15px;
+        margin-left: 14px;
+    }
+    .home {
+        height: 707px;
+    }
+    #menu {
+        margin-top: 10px;
+    }
+    .nav-bar {
+        margin-top: 45px;
+    }
+    .works {
+        margin-top: 300px;
+    }
     .list-item {
         display: block;
     }
@@ -28,10 +47,6 @@
         font-size: 13px;
         margin: 0px;
         text-align: center;
-    }
-    .about .row .about-img {
-        width: 100%;
-        height: 100%;
     }
 }
 
@@ -81,5 +96,11 @@
     .carousel-control {
         display: none;
     }
-    .about .row .about-img {}
+    .image:hover:after {
+        opacity: 1;
+        width: 87%;
+        height: 90%;
+        margin-top: 15px;
+        margin-left: 14px;
+    }
 }

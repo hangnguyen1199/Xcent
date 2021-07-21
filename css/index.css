@@ -52,7 +52,8 @@ h3 {
 /*home-menu*/
 
 .home {
-    height: 707px;
+    height: 100%;
+    background-attachment: fixed;
 }
 
 .home:after {
@@ -139,7 +140,7 @@ h3 {
     right: 15px !important;
 }
 
-#menu1.affix {
+#abc.affix {
     position: fixed;
     background: #fff;
     top: -1px;
@@ -149,7 +150,8 @@ h3 {
     border-radius: 0px;
 }
 
-.navbar-custom .navbar-brand {
+
+/* .navbar-custom .navbar-brand {
     font-weight: 700;
     font-size: 18px;
 }
@@ -197,7 +199,7 @@ h3 {
     display: block;
     padding: 15px 15px;
     text-transform: uppercase;
-}
+} */
 
 .line {
     background: #666;
@@ -237,11 +239,73 @@ h2 {
     font-weight: 700;
 }
 
+.header {
+    position: relative;
+    width: 100%;
+    z-index: 998;
+}
+
+.navbar-custom {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.navbar-custom,
+.navbar-custom .dropdown-menu {
+    background: #fff;
+    padding: 0;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav>li>a,
+.navbar-custom .navbar-nav .dropdown-menu>li>a {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #5b5963;
+}
+
+.navbar-custom .nav li.active,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .navbar-nav>li.active a {
+    background: rgba(253, 115, 90, 1);
+    color: #fff;
+    outline: 0 none;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.navbar-custom .dropdown-menu {
+    border: 0;
+    border-top: 2px solid #49e2d6;
+    border-radius: 0;
+}
+
+.navbar-custom .dropdown-menu>li>a {
+    padding: 10px 20px;
+}
+
+.navbar-custom .nav .open>a,
+.navbar-custom .dropdown-menu>li>a:hover,
+.navbar-custom .dropdown-menu>li>a:focus {
+    background: #f5f5f5;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background: #5b5963;
+}
+
 
 /*work*/
 
 .works {
     padding: 120px 0 100px;
+    height: 100%;
 }
 
 #menu {
@@ -406,6 +470,11 @@ figure {
 
 /*about*/
 
+.about {
+    height: 100%;
+    margin-bottom: 50px;
+}
+
 .about-text {
     padding-left: 15px;
     padding-right: 15px;
@@ -444,13 +513,17 @@ figure {
     margin-left: 4px;
 }
 
+.subtitle {
+    font-style: italic;
+    font-size: 14px;
+}
+
 
 /*testimony*/
 
 .testimony {
     background-color: #f5f5f5;
-    height: 550px;
-    margin-top: 70px;
+    height: 100%;
 }
 
 .testi,
@@ -714,9 +787,13 @@ textarea.form-control {
 /*responsive*/
 
 @media (max-width: 991px) {
-    .about-img {
+    .about {
+        height: 100%;
+        margin-bottom: 50px;
+    }
+    .about .row .about-img {
+        height: 50%;
         position: relative;
-        height: 300px;
     }
     .list .list-item {
         width: 50%;
@@ -724,27 +801,24 @@ textarea.form-control {
 }
 
 @media(max-width:768px) {
+    .home {
+        height: 100%;
+    }
     .image:hover:after {
         opacity: 1;
         width: 92%;
         height: 78%;
         margin-top: 15px;
-        margin-left: 14px;
-    }
-    .home {
-        height: 707px;
     }
     .home-title {
         text-align: left;
         left: 10px;
-    }
-    #menu {
-        margin-top: 50px;
+        top: 367px;
     }
     .nav>li>a {
         position: relative;
         display: block;
-        padding: 14px 14px;
+        padding: 15px 14px;
         text-transform: uppercase;
     }
     .all-header {
@@ -752,7 +826,27 @@ textarea.form-control {
         text-align: center;
     }
     .works {
-        padding: 388px 0px 100px;
+        padding: 120px 0px 100px;
+    }
+    .about {
+        display: flex;
+    }
+    .about .row .about-img {
+        height: 39%;
+        width: 100%;
+    }
+    .about-text {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        background: #fff;
+        padding: 0px 60px 50px;
+    }
+    .col-sm-offset-6 {
+        margin-left: 0 !important;
+    }
+    .testi {
+        padding-top: 225px;
     }
     .list-item {
         display: block;
@@ -774,17 +868,24 @@ textarea.form-control {
         margin: 0px;
         text-align: center;
     }
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-left: -15px;
+    }
 }
 
 @media (max-width: 480px) {
     .home:after {
-        top: 80px;
+        top: 7px;
         height: 98vh;
     }
     .home-title {
         text-align: left;
         left: 10px;
-        top: 88px;
+        top: 8px !important;
+    }
+    .services {
+        margin-top: 98px;
     }
     .home,
     .works,
@@ -792,10 +893,7 @@ textarea.form-control {
     .testimony,
     .blog,
     .contact {
-        padding: 80px 0;
-    }
-    .menu {
-        margin-top: -150px !important;
+        padding: 8px 0;
     }
     .works .list .list-item {
         width: 10%;
@@ -812,9 +910,18 @@ textarea.form-control {
         top: 40%;
         padding-left: 75px;
     }
+    .about {
+        display: flex;
+    }
+    .about .row .about-img {
+        height: 30%;
+    }
     .about-text {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .testi {
+        padding-top: 260px;
     }
     .all-title span {
         font-size: 40px;

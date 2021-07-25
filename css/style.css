@@ -594,6 +594,10 @@ button {
     border-radius: 2px;
 }
 
+.include .form-group {
+    margin-bottom: 15px;
+}
+
 .form-control:focus {
     border-color: #666;
 }
